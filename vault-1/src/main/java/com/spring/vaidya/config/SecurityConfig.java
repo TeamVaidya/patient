@@ -64,7 +64,7 @@ public class SecurityConfig {
 
                         // Protected endpoints that require authentication
                         .requestMatchers("doctor/all", "/api/patients/slot/{slotId}", 
-                                         "/api/patients/post","/api/patients/doctor/{userId}/date/{date}")
+                                         "/api/patients/post","/api/patients/","/api/patients/doctor/{userId}/date/{date}")
                         .authenticated()
                 )
                 .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS)) // Set session policy to stateless (JWT-based auth)
